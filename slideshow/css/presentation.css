@@ -857,7 +857,7 @@ body {
   background: radial-gradient(#f0f0f0, #bebebe);
 }
 img {
-  width: 200px;
+  max-width: 100%;
 }
 .image-container {
   display: inline-block;
