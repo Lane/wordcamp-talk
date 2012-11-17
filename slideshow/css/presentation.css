@@ -1029,32 +1029,32 @@ ul.checklist {
   font-size: 0.302em;
   text-transform: uppercase;
 }
-#y1999 h2 {
-  font-size: 5em;
-}
-#y1999 ul.checklist {
+ul.checklist {
   font-size: 0.75em;
   width: 535px;
   margin: -35px auto 0 auto;
   border-top: 4px solid #000000;
   padding-top: 30px;
 }
-#y1999 ul.checklist .icon-ok {
+ul.checklist .icon-ok {
   float: left;
   margin-right: 10px;
   color: #46a546;
 }
-#y1999 ul.checklist li {
+ul.checklist li {
   *zoom: 1;
 }
-#y1999 ul.checklist li:before,
-#y1999 ul.checklist li:after {
+ul.checklist li:before,
+ul.checklist li:after {
   display: table;
   content: "";
   line-height: 0;
 }
-#y1999 ul.checklist li:after {
+ul.checklist li:after {
   clear: both;
+}
+#y1999 h2 {
+  font-size: 5em;
 }
 .y2012 h2 {
   font-size: 5.5em;
@@ -1128,7 +1128,59 @@ pre {
 #meta-tag pre {
   text-align: center;
   height: 100px;
-  width: 500px;
+  width: 700px;
   height: 20px;
   margin: 0 auto;
+  font-size: 18px;
+}
+#media p.smaller {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+#media pre {
+  font-size: 18px;
+  height: 150px;
+  width: 300px;
+  margin: 0 auto;
+}
+#resource-list h2,
+#further h2 {
+  font-size: 0.5em;
+  border-bottom: 2px solid black;
+  text-align: left;
+}
+#resource-list ul,
+#further ul {
+  font-size: 0.38em;
+  text-align: left;
+}
+#resource-list ul li,
+#further ul li {
+  padding: 6px 0px 4px 0px;
+  border-bottom: 1px solid #999;
+  color: #666;
+}
+#resource-list ul li:last-child,
+#further ul li:last-child {
+  border-bottom-color: #000;
+}
+#resource-list ul li a,
+#further ul li a {
+  display: block;
+}
+#resource-list ul li span,
+#further ul li span {
+  font-size: 0.86em;
+}
+#resource-list .resource-container,
+#further .resource-container {
+  vertical-align: top;
+  display: inline-block;
+  width: 31%;
+  margin-left: 1%;
+}
+#resource-list .resource-container:first-child,
+#further .resource-container:first-child {
+  margin-left: 0%;
 }

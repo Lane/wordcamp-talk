@@ -25,25 +25,25 @@
   }
 }
 
+ul.checklist {
+  font-size: 0.75em;
+  width:  535px;
+  margin: -35px auto 0 auto;
+  border-top:  4px solid @black;
+  padding-top: 30px;
+  .icon-ok {
+    float: left;
+    margin-right: 10px; 
+    color:@green; 
+  }
+  li {
+    .clearfix();
+  }
+}
 
 #y1999 {
   h2 {
     font-size: 5em;
-  }
-  ul.checklist {
-    font-size: 0.75em;
-    width:  535px;
-    margin: -35px auto 0 auto;
-    border-top:  4px solid @black;
-    padding-top: 30px;
-    .icon-ok {
-      float: left;
-      margin-right: 10px; 
-      color:@green; 
-    }
-    li {
-      .clearfix();
-    }
   }
 }
 
@@ -126,8 +126,58 @@ pre {
   pre {
     text-align: center;
     height: 100px;
-    width: 500px;
+    width: 700px;
     height: 20px;
     margin: 0 auto;
+    font-size: 18px;
+  }
+}
+
+#media { 
+p.smaller {
+  font-size: 0.65em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+  pre { font-size: 18px;
+    height: 150px;
+    width: 300px;
+    margin: 0 auto;
+   }
+}
+
+#resource-list, #further {
+  h2 {
+    font-size: 0.5em;
+    border-bottom:  2px solid black;
+    text-align: left;
+  }
+  ul {
+    font-size: 0.38em;
+    text-align: left;
+    li {
+      padding:  6px 0px 4px 0px;
+      border-bottom: 1px solid #999;
+      color:  #666;
+      &:last-child {
+        border-bottom-color: #000;
+      }
+      a {
+         display:  block;
+      }
+      span{
+        font-size: 0.86em;
+      }
+    }
+  }
+  .resource-container {
+  vertical-align: top;
+    display: inline-block;
+    width: 31%;
+    margin-left: 1%;
+    &:first-child {
+      margin-left:0%;
+    }
   }
 }

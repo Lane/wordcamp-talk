@@ -457,7 +457,7 @@
     <div class="step" data-x="-3000" data-y="0" data-rotate="90" data-scale="4">
       
       <h2>Implementation</h2>
-    
+
     </div>
     
     
@@ -484,6 +484,7 @@
       
       Further Reading:
       *  [Responsive Design With Paper](http://www.webcredible.co.uk/blog/responsive-design-with-paper)
+      *  STYLE TILES!
       
     --> 
     
@@ -552,6 +553,70 @@
 
   </div>
   
+  <div class="step" data-x="-4000" data-y="3000" data-rotate="90">
+    
+    <iframe src="http://bradfrost.github.com/this-is-responsive/patterns.html" width="900" height="600"></iframe>
+    <p class="caption"><a href="http://bradfrost.github.com/this-is-responsive/patterns.html">http://bradfrost.github.com/this-is-responsive/patterns.html</a></p>
+
+  </div>
+  
+<!-- 
+  
+  MOBILE GUIDELINES
+  ######################################################
+  Mobile users need a simplified interface, they do not 
+  have the precision of a mouse.  Touch screens also 
+  have a variety of gestures, and a website should 
+  utilize those whenever it is applicable.  However, it
+  might be a good idea to provide a fallback for the
+  user. Lastly, the page should be light weight for 
+  mobile.  That means serving smaller images, using less 
+  resource intensive javascript and also resource heavy
+  css.
+  
+  With tablets,
+    - [Apple Touch Guidelines](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40006556)
+--> 
+  
+  <div id="guidelines" class="step" data-x="-4000" data-y="4000" data-rotate="90">
+      <h2 style="font-size:3.5em;">Mobile</h2>
+      <ul style="font-size: 0.55em;" class="checklist">
+        <li><i class="icon-ok"></i> Simple interface</li>
+        <li><i class="icon-ok"></i> Utilize touch gestures when possible</li>
+        <li><i class="icon-ok"></i> Lightweight (workload and file size)</li>
+      </ul>
+  </div>
+  
+<!-- 
+  
+  META TAG
+  ######################################################
+  Now we can get into the actual build of the design.
+  Start with the meta tag. The viewport meta tag tells the 
+  browser that this page is intended to be viewed at 
+  whatever the standard
+  device width is for the page.  You may also specify 
+  zoom settings in this meta tag.
+  
+  Sometimes images will look pixelated on a mobile 
+  device.  That is because it is a higher resolution 
+  screen and the browser is actually zooming in on the 
+  page.
+  
+  Further Reading
+  *  http://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho
+  *  http://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html
+  
+--> 
+  
+  <div id="meta-tag" class="step" data-x="-5000" data-y="0" data-rotate="90">
+  
+      <p>Meta Tag</p>
+      <pre class="prettyprint">
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</pre>
+      
+  </div>
+
   <!-- 
     
     MEDIA QUERIES
@@ -565,39 +630,6 @@
     matches the query.
     
   --> 
-  
-  <div class="step" data-x="-4000" data-y="3000" data-rotate="90">
-    
-    <iframe src="http://bradfrost.github.com/this-is-responsive/patterns.html" width="900" height="600"></iframe>
-    <p class="caption"><a href="http://bradfrost.github.com/this-is-responsive/patterns.html">http://bradfrost.github.com/this-is-responsive/patterns.html</a></p>
-
-  </div>
-  
-<!-- 
-  
-  META TAG
-  ######################################################
-  The viewport meta tag tells the browser that this 
-  page is intended to be viewed at whatever the standard
-  device width is for the page.  You may also specify 
-  zoom settings in this meta tag.
-  
-  Sometimes images will look pixelated on a mobile 
-  device.  That is because it is a higher resolution 
-  screen and the browser is actually zooming in on the 
-  page.
-  
---> 
-  
-  <div id="meta-tag" class="step" data-x="-5000" data-y="0" data-rotate="90">
-  
-      <p>Meta Tag</p>
-      <pre class="prettyprint">
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</pre>
-      
-  </div>
-
-  
   <div class="step" data-x="-5000" data-y="1000" data-rotate="90">
   
       <p>CSS3 Media Queries</p>
@@ -628,85 +660,108 @@
       </pre>
       
   </div>
-  
 
-
-<!-- 
-  
-  GUIDELINES
-  ######################################################
-  Mobile users need a simplified interface, they do not 
-  have the precision of a mouse.  Touch screens also 
-  have a variety of gestures, and a website should 
-  utilize those whenever it is applicable.  However, it
-  might be a good idea to provide a fallback for the
-  user. Lastly, the page should be light weight for 
-  mobile.  That means serving smaller images, using less 
-  resource intensive javascript and also resource heavy
-  css.
-  
-  With tablets,
-    - [Apple Touch Guidelines](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40006556)
---> 
-  
-  <div id="mobile" class="step" data-x="-5000" data-y="1000" data-rotate="90">
-    <div class="device-container">
-      <h2>Mobile Guidelines</h2>
-      <ul class="checklist">
-        <li>Simple interface</li>
-        <li>Utilize touch gestures when possible</li>
-        <li>Lightweight (workload and file size)</li>
-      </ul>
-    </div>
-  </div>
   
 <!-- 
   
   HANDLING IMAGES & MEDIA
   ######################################################
-
+  How to handle images in a responsive design has also 
+  been a hot topic within the community.  There is 
+  agreement that mobile users should be served a smaller
+  image size than desktop users, but there is some 
+  argument over the best way to implement it.
+  
+  Some use server side solutions, like adaptive images, 
+   to generate different sizes of images for different 
+  devices. This requires no markup changes.
+  
+  Another method is to define alternate resolutions for
+  images in data attributes on the image tag and using
+  javascript to swap out the image based on the device.
+  
+  Use fitvids for maintaining aspect ratios!
+  
+  Further Reading
+  *  Simple Responsive Images Wordpress Plugin (http://wordpress.org/extend/plugins/simple-responsive-images/)
+  *  Adaptive Images (http://adaptive-images.com/)
+  *  http://css-tricks.com/which-responsive-images-solution-should-you-use/
+  *  http://viewportindustries.com/blog/automatic-responsive-images-in-wordpress/
 --> 
   
-  <div id="meta-tag" class="step" data-x="-5000" data-y="1000" data-rotate="90">
+  <div id="media" class="step" data-x="-5000" data-y="2000" data-rotate="90">
   
       <p>Images &amp; Media</p>
+      <p class="smaller">Fluid Images</p>
+      <pre class="prettyprint">
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+      </pre>
 
   </div>
-  
-<!-- 
-  
-  IMPLEMENTATION SUMMARY
-  ######################################################
-
--->
 
 <!-- 
   
   RESOURCES
   ######################################################
   Might seem like a lot to do compared to building a 
-  fixed width website, but there are tools to help.
-    - Bootstrap
-    - Foundation
-    - Skeleton
-    
+  fixed width website, but there are a ton of tools to 
+  help.
 
---> 
+-->  
+
+<div class="step" data-x="0" data-y="-2000" data-rotate="180" data-scale="4">
   
+  <h2>Resources</h2>
+
+</div>
+
 <!-- 
-  
-  RESPONSIVE CSS FRAMEWORK COMPARISON
-  ######################################################
 
+  CSS FRAMEWORKS
+  #################################
+- Bootstrap
+- Foundation
+- Skeleton
 
 -->
 
-  <div class="step" data-x="-5000" data-y="2000" data-rotate="90">
-    
-    <iframe src="http://responsive.vermilion.com/compare.php" width="900" height="600"></iframe>
-    <p class="caption"><a href="http://responsive.vermilion.com/compare.php">http://responsive.vermilion.com/compare.php</a></p>
+<div id="resource-list" class="step" data-x="0" data-y="-3000" data-rotate="180">
+  <div class="resource-container">
+    <h2>CSS Frameworks</h2>
+    <ul>
+      <li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></li>
+      <li><a href="http://foundation.zurb.com/">Foundation</a></li>
+      <li><a href="http://www.getskeleton.com/">Skeleton</a></li>
+    </ul>
+  </div>
+  <div class="resource-container">
+    <h2>Further Reading</h2>
+    <ul>
+      <li><a href="http://bradfrost.github.com/this-is-responsive/">This Is Responsive.</a> 
+      <span>Responsive Patterns, Resources, and News</span></li>
+      <li><a href="http://www.alistapart.com/articles/responsive-web-design/">Responsive Web Design</a> <span>A List Apart, Ethan Marcotte</span></li>
+    </ul>
+  </div>
+  <div class="resource-container">
+    <h2>Tools</h2>
+    <ul>
+      <li><a href="https://github.com/scottjehl/Respond">Respond.js</a> 
+      <span>IE 6-8 Support</span></li>
+      <li><a href="http://www.alistapart.com/articles/responsive-web-design/">Bones Wordpress Theme</a> <span>Responsive enabled base theme</span></li>
+      <li><a href="http://fitvidsjs.com/">FitVids</a> <span>Fluid width videos</span></li>
+      <li><a href="http://adaptive-images.com/">Adaptive Images</a> <span>Serving different images to different devices</span></li>
+    </ul>
+  </div>
+</div>
+  
+<div id="further" class="step" data-x="0" data-y="-4000" data-rotate="180">
 
-  </div>   
+</div>
 
 <!-- 
   
@@ -714,8 +769,9 @@
   ######################################################
   - Bones
   - Simple Responsive Images (http://wordpress.org/extend/plugins/simple-responsive-images/)
-
-
+  - Juiz Smart Mobile Admin (http://wordpress.org/extend/plugins/juiz-smart-mobile-admin/)
+  - http://wordpress.org/extend/plugins/respondjs/ 
+  
 -->  
 
 <!-- 
@@ -726,17 +782,12 @@
   - less
   - font awesome
 
-
 -->  
 
     <div id="overview" class="step" data-x="0" data-y="0" data-scale="15">
     </div>
 
 </div>
-
-<!--
-iPhone vector:http://schmychael.deviantart.com/art/IPhone-Vector-198799114
--->
 
 <div class="hint">
     <p>Use a spacebar or arrow keys to navigate</p>
