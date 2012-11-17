@@ -1,0 +1,1 @@
+Slide notes are commented in [index.html](https://github.com/Lane/wordcamp-talk/blob/master/index.html)
