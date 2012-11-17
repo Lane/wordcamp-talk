@@ -15,9 +15,11 @@
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link href="css/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/prettify.js"></script>
 </head>
 
-<body class="impress-not-supported">
+<body onload="prettyPrint();" class="impress-not-supported">
 
 <div class="fallback-message">
     <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
@@ -68,9 +70,9 @@
       
     -->
     
-    <div class="step">
-      <img src="img/dumpster.jpg" />
-    </div>
+ 
+      <!-- <img src="img/dumpster.jpg" /> -->
+
     
     <!-- 
     
@@ -143,10 +145,6 @@
         </ul>
         -->
     </div>
-
-<!--
-  -  Mobile usage places (shopping, apparently the bathroom, etc)
--->
 
     <!-- 
     
@@ -284,9 +282,14 @@
     
     <!-- 
     
-      ONE SOLUTION
+      ONE SOLUTION: SEPARATE MOBILE SITE
       ######################################################
-      
+      But... how do you support multiple devices?  One 
+      approach is to build a separate mobile site for 
+      your users. One usability studies has actually found 
+      that mobile users have a higher success rate on 
+      websites that offer a separate mobile version of 
+      their site.
     
     -->
     
@@ -295,11 +298,6 @@
         <p class="small">Build a</p>
         <p class="large">Separate Mobile Website</p>
       </div>
-      <ul class="sources">
-        <li>http://www.useit.com/alertbox/mobile-vs-full-sites.html</li>
-        <li>http://www.webmonkey.com/2012/04/why-jakob-nielsen-is-wrong-about-mobile-websites/</li>
-        <li>http://www.lukew.com/ff/entry.asp?1631</li>
-      </ul>
     </div>
     
     
@@ -308,15 +306,15 @@
       JAKOB NIELSEN QUOTE 
       ######################################################
       Jakob Nielsen is a well known usabilty expert, in a 
-      study earlier this year he found that good mobile user 
-      experience requires a separate site to target mobile 
-      users. 
+      study earlier this year he defines a guideline that
+      stated good mobile user experience requires a separate 
+      site. 
       
       This post caused quite a bit of uproar in the design 
       community, and several blog posts popped up touting 
       responsive design being a more usable approach.  An 
       argument could be made for either side depending on 
-      the needs of a website.  Also, responsive design is 
+      the needs of the website.  Also, responsive design is 
       not widely implemented yet, so a lot of the results in 
       Nielsen's report are based on users experiences on 
       websites that were not built for mobile use.  It also 
@@ -337,7 +335,9 @@
     -->
     
     <div class="step" data-x="1000" data-y="6000">    
-    <quote>Good mobile user experience requires a different design than what's needed to satisfy desktop users. Two designs, two sites, and cross-linking to make it all work.</quote>
+      <quote>
+        Good mobile user experience requires a different design than what's needed to satisfy desktop users. Two designs, two sites, and cross-linking to make it all work.
+      </quote>
       <p>
         - <a href="http://www.useit.com/alertbox/mobile-vs-full-sites.html">Jakob Nielsen</a>
       </p>
@@ -367,28 +367,29 @@
       $$$
        
     -->    
-    <div class="step" data-x="1000" data-y="6000">
+    <div class="step" data-x="2000" data-y="6000">
     
       <img src="img/doritos-mobile.png" />
       
     </div>
     
     <div class="step" data-x="1000" data-y="6000">
-      <!-- overview of separate -->
-      <!-- Both can be done properly... but: content parity.   Doritos.
-        Picture this:  I'm at home, relaxing, in my sweatpants, watching TV.  Then, all of the sudden a case of the munchies strikes.  I want Doritos, but I don't know what kind.  I KNOW!  I'll check out what kind of Doritos I can get on their website.
-        
-        I go to Doritos.com, and get this.
-
-        This is the worst possible thing you could do.
-        
-        Doritos has a separate mobile site, to tell people that they do not support mobile.
-          JACKIE CHAN!!
-        --> 
-      <!-- Does not cover high res devices, range of resolutions, tablets etc. -->
-      <p>Doritos</p>
+      <!-- Jackie Chan? -->
     </div>
     
+    
+    <!-- 
+      
+      ANOTHER SOLUTION: RESPONSIVE DESIGN!
+      ######################################################
+      Optimize all website tasks, no matter the device.  If 
+      I'm buying records online, and I go to a site and have 
+      to zoom in on EVERY page, I'm just going to leave.
+      Responsive design doesn't require you to cut content. 
+      You have one set of content, and shift it around to 
+      present it to the user in the best way.
+       
+    --> 
     <div class="step" data-x="3000" data-y="0" data-rotate="270" data-scale="2">
       <h1 style="font-size:1.75em">Responsive Design!</h1>
     </div>
@@ -396,109 +397,339 @@
     <div class="step" data-x="4000" data-y="0" data-rotate="270">
     
       <p>Take your content, and optimize the design of that content to display on any resolution.</p>
-      
-      <!-- Perform all website tasks, no matter the device.  If I'm buying records online, and I go to a site and have to zoom in on EVERY page.  No way. -->
 
     </div>
     
+    <!-- 
+      
+      AN EXAMPLE: BOSTONGLOBE.COM
+      ######################################################
+      The Boston Globe website is one of the earlier 
+      websites to go responsive, and in my opinion it is 
+      still one of the best.  The page is a joy to read no
+      matter how you're looking at it.
+       
+      Image from: http://upload.wikimedia.org/wikipedia/commons/6/6a/Boston_Globe_responsive_website.jpg 
+      
+      Further Reading
+      ######################################################
+      *  [Building the New BostonGlobe.com](http://beta.boston.com/post/10204625552/building-the-new-bostonglobe-com?911b9230)
+      
+    --> 
+    
     <div class="step" data-x="5000" data-y="0" data-rotate="270">
     
-      <!-- Boston Globe: http://upload.wikimedia.org/wikipedia/commons/6/6a/Boston_Globe_responsive_website.jpg -->
       <img style="width: 100%;" src="img/Boston_Globe_Responsive.jpg" />
       <p style="font-size:  0.4em;">Check out <a href="http://www.mediaqueri.es">mediaqueri.es</a> for more examples</p>
-      <!-- http://beta.boston.com/post/10204625552/building-the-new-bostonglobe-com?911b9230 -->
     </div>
     
+    <!-- 
+      
+      SUMMARY
+      ######################################################
+      If I had to summarize what responsive design is in one
+      sentence (and I don't) it would be:  Responsive 
+      Design is about providing the user with the best 
+      experience possible,  no matter the device.  Why 
+      penalize the user  for their preference of browsing 
+      your site? Support my Grandpa's 800x600 CRT monitor, 
+      or he'll call me.  Love the guy, but enough is 
+      enough.
+      
+    --> 
     <div class="step" data-x="6000" data-y="0" data-rotate="270">
-    
       <p>Provide the user with the best experience possible,  no matter the device.</p>
     </div>
+    
+    <!-- 
+      
+      IMPLEMENTATION
+      ######################################################
+      So, what's involved in building a responsive design? 
+      A lot of coffee.  Initially you would go through a 
+      requirements phase with the client to understand what 
+      they need from their website.  With responsive design, 
+      you also need to take into consideration which devices
+      need to be supported.
+      
+    --> 
     
     <div class="step" data-x="-3000" data-y="0" data-rotate="90" data-scale="4">
       
       <h2>Implementation</h2>
-      
-      <!-- What is involved? Lots of coffee. -->
-      
-      <!-- Initially you would go through a requirements phase with the client to understand what they need from their website.  With responsive design, you also need to take into consideration which devices need to be supported. -->
-
+    
     </div>
+    
+    
+    <!-- 
+      
+      START WITH CONTENT
+      ######################################################
+      The way you think about content needs to change for
+      the responsive web.  People don't use their mobile
+      device to just "surf" anymore, they are very goal 
+      oriented.  When planning out your content, it's best
+      to plan it out in a single column on a page, placing 
+      items in order of their importance.  Doing so gives 
+      you a very basic model of your mobile website. 
+      Building content for the mobile web is a topic in 
+      itself, so I'm not going in depth.  There are some 
+      good resources in the further reading section.
+      
+      An interesting approach I've seen is taking a print 
+      out of an existing design, cutting out the pieces, 
+      and assemble them in a vertical fashion in order of
+      priority.
+      
+      
+      Further Reading:
+      *  [Responsive Design With Paper](http://www.webcredible.co.uk/blog/responsive-design-with-paper)
+      
+    --> 
     
     <div class="step" data-x="-4000" data-y="0" data-rotate="90">
       
       <p>Start With Content</p>
-      
-      <!--  Content needs to change for the responsive web.  People don't use their mobile device to just "surf" anymore, they are very goal oriented [SOURCE].  When planning out your content, it's best to plan it out in a single column on a page, placing items in order of their importance.  Doing so gives you a very basic model of your mobile website.  There are several different strategies for content on the mobile web, check the resources for more information. -->
+      <img src="img/two-linear-layouts.jpg" />
   
     </div>
     
-  <div class="step" data-x="-4000" data-y="1000" data-rotate="90">
-    
-    <p>Content: Example</p>
-    
-
-  </div>
-  
-  <div class="step" data-x="-4000" data-y="1000" data-rotate="90">
-    
-    <!-- When wireframing out a responsive site I would highly recommend doing the work in browser.   Some controversy around this subject.  For the University work, we wireframed every page we were redesigning.  This was only 9 pages, but it works out to 27 wireframes.  When revisions come, things get tough.  Building it in browser has benefits:
-    
-    - Iterative approach 
-    - Get a better notion of breakpoints
-    - Revise in one spot, update everywhere.
-    
-     -->
-    
-    <p>Responsive Wireframing</p>
-    
-    <!-- http://uxmag.com/resources/wirefy-the-rapid-responsive-wireframing-tool -->
-    
-    <!-- Responsive Patterns -->
-    
-  </div>
-  
-  <div class="step">
-    
-    <h2>Wireframing: Example</h2>
-    
     <!-- 
-      Start with the smallest resolution and work your way up.
       
-      - Mobile
-      - Tablet
-      - Desktop
+      WIREFRAMING
+      ######################################################
+      When wireframing out a responsive site I would highly
+      recommend doing the work in browser.   Some 
+      controversy around this subject.  For the University 
+      work, we wireframed every page we were redesigning.  
+      This was only 9 pages, but it works out to 27 
+      wireframes.  When revisions come, things get tough. 
+      Building it in browser has many benefits:
       
-      Show how items shift from device to device.
-    -->
+      - Facilitates and iterative approach
+      - Get a better notion of breakpoints in the design
+      - Revise in one spot, updates for all devices.
+      
+    --> 
+  
+    <div id="wireframing" class="step" data-x="-4000" data-y="1000" data-rotate="90">
+      
+      <p>Responsive Wireframing</p>
+      <p class="smaller">Do it in the browser</p>
+      <img src="img/wirefy.jpg" />
+      <p class="caption"><a href="http://getwirefy.com/">Wirefy</a></p>
+      <!-- Image from: http://wireframes.linowski.ca/2012/07/wirefy/ -->
+      
+    </div>
+  
+  
+  <!-- 
+    
+    MOBILE FIRST
+    ######################################################
+    Start with the smallest resolution and work your way up.
+    
+    - Mobile
+    - Tablet
+    - Desktop
+    
+    Show how page elements shift from device to device. 
+    Sometimes it's a challenge to make certain pieces work 
+    on all resolutions.  There are some patterns for how 
+    to implement common page elements online, most with
+    markup.
+    
+    http://bradfrost.github.com/this-is-responsive/patterns.html
+    
+  --> 
+  
+  <div class="step" data-x="-4000" data-y="2000" data-rotate="90">
+    
+    <p>Mobile First</p>
+    <img src="img/wireframe-example.jpg" />
+    
+    <!-- Image from: http://dolody.com/#!/masterpiece/responsive-design-streamlining-your-process.html -->
 
   </div>
   
-  <div class="step">
+  <!-- 
     
-    <p>Build It</p>
+    MEDIA QUERIES
+    ######################################################
+    In order to make elements on the page move and shift 
+    around at different resolutions, you need to specify
+    resolution specific styles.  Media queries in CSS3 
+    allow you to do that.  You can specify min-width
+    and max-width values for the media queries and the
+    page will only use those styles when the browser
+    matches the query.
     
-    <!-- 
-      Main components of a responsive design
-    -->
+  --> 
+  
+  <div class="step" data-x="-4000" data-y="3000" data-rotate="90">
+    
+    <iframe src="http://bradfrost.github.com/this-is-responsive/patterns.html" width="900" height="600"></iframe>
+    <p class="caption"><a href="http://bradfrost.github.com/this-is-responsive/patterns.html">http://bradfrost.github.com/this-is-responsive/patterns.html</a></p>
 
   </div>
+  
+<!-- 
+  
+  META TAG
+  ######################################################
+  The viewport meta tag tells the browser that this 
+  page is intended to be viewed at whatever the standard
+  device width is for the page.  You may also specify 
+  zoom settings in this meta tag.
+  
+  Sometimes images will look pixelated on a mobile 
+  device.  That is because it is a higher resolution 
+  screen and the browser is actually zooming in on the 
+  page.
+  
+--> 
+  
+  <div id="meta-tag" class="step" data-x="-5000" data-y="0" data-rotate="90">
+  
+      <p>Meta Tag</p>
+      <pre class="prettyprint">
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</pre>
       
-    <!--
-        
-        So to make a summary of all the possible attributes used to position presentation steps, we have:
-        
-        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
-            the canvas in pixels; their default value is 0;
-        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
-            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
-            are exactly the same;
-        * `data-scale` - defines the scale of step element; default value is 1
-        
-        These values are used by impress.js in CSS transformation functions, so for more information consult
-        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
-        
-    -->
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+  </div>
+
+  
+  <div class="step" data-x="-5000" data-y="1000" data-rotate="90">
+  
+      <p>CSS3 Media Queries</p>
+      <pre class="prettyprint">
+/* BASE STYLING */
+
+@media only screen and (min-width: 481px) {
+  /* LARGER MOBILE DEVICES */
+}
+
+@media only screen and (min-width: 768px) {
+  /* TABLET &amp; SMALLER LAPTOPS */
+}
+
+@media only screen and (min-width: 1030px) {
+  /* DESKTOP */
+}
+
+@media only screen and (min-width: 1240px) {
+  /* LARGE VIEWING SIZE */
+}         
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+  /* RETINA (2x RESOLUTION DEVICES) */
+}
+      </pre>
+      
+  </div>
+  
+
+
+<!-- 
+  
+  GUIDELINES
+  ######################################################
+  Mobile users need a simplified interface, they do not 
+  have the precision of a mouse.  Touch screens also 
+  have a variety of gestures, and a website should 
+  utilize those whenever it is applicable.  However, it
+  might be a good idea to provide a fallback for the
+  user. Lastly, the page should be light weight for 
+  mobile.  That means serving smaller images, using less 
+  resource intensive javascript and also resource heavy
+  css.
+  
+  With tablets,
+    - [Apple Touch Guidelines](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40006556)
+--> 
+  
+  <div id="mobile" class="step" data-x="-5000" data-y="1000" data-rotate="90">
+    <div class="device-container">
+      <h2>Mobile Guidelines</h2>
+      <ul class="checklist">
+        <li>Simple interface</li>
+        <li>Utilize touch gestures when possible</li>
+        <li>Lightweight (workload and file size)</li>
+      </ul>
+    </div>
+  </div>
+  
+<!-- 
+  
+  HANDLING IMAGES & MEDIA
+  ######################################################
+
+--> 
+  
+  <div id="meta-tag" class="step" data-x="-5000" data-y="1000" data-rotate="90">
+  
+      <p>Images &amp; Media</p>
+
+  </div>
+  
+<!-- 
+  
+  IMPLEMENTATION SUMMARY
+  ######################################################
+
+-->
+
+<!-- 
+  
+  RESOURCES
+  ######################################################
+  Might seem like a lot to do compared to building a 
+  fixed width website, but there are tools to help.
+    - Bootstrap
+    - Foundation
+    - Skeleton
+    
+
+--> 
+  
+<!-- 
+  
+  RESPONSIVE CSS FRAMEWORK COMPARISON
+  ######################################################
+
+
+-->
+
+  <div class="step" data-x="-5000" data-y="2000" data-rotate="90">
+    
+    <iframe src="http://responsive.vermilion.com/compare.php" width="900" height="600"></iframe>
+    <p class="caption"><a href="http://responsive.vermilion.com/compare.php">http://responsive.vermilion.com/compare.php</a></p>
+
+  </div>   
+
+<!-- 
+  
+  WORDPRESS RESOURCES
+  ######################################################
+  - Bones
+  - Simple Responsive Images (http://wordpress.org/extend/plugins/simple-responsive-images/)
+
+
+-->  
+
+<!-- 
+  
+  BUILT USING
+  ######################################################
+  - impress.js
+  - less
+  - font awesome
+
+
+-->  
+
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="15">
     </div>
 
 </div>
@@ -517,7 +748,12 @@ if ("ontouchstart" in document.documentElement) {
 </script>
 
 <script src="js/impress.js"></script>
-<script>impress().init();</script>
+<script>
+  impress().init();
+ 
+
+
+</script>
 
 <script type="text/javascript" src="http://www.statcounter.com/js/FusionCharts.js"></script><script type="text/javascript" src="http://gs.statcounter.com/chart.php?mobile_vs_desktop-na-monthly-200812-201211"></script>
 </body>
